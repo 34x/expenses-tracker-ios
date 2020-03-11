@@ -697,7 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpencesTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3TQXLRUNTH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ExpencesTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -720,7 +720,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpencesTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3TQXLRUNTH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ExpencesTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
