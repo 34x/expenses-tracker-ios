@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "name": "Groceries",
+        "icon": "🍱"
+    },
+    {
+        "id": "2",
+        "name": "Transport",
+        "icon": "🚙"
+    },
+    {
+        "id": "3",
+        "name": "Eating out / Restaurants",
+        "icon": "🍽"
+    },
+    {
+        "id": "4",
+        "name": "Other",
+        "icon": "🙈"
+    },
+    {
+        "id": "5",
+        "name": "Coffee",
+        "icon": "☕️"
+    },
+    {
+        "id": "6",
+        "name": "Public transport",
+        "icon": "🚎"
+    },
+    {
+        "id": "7",
+        "name": "Taxi",
+        "icon": "🚕"
+    },
+    {
+        "id": "8",
+        "name": "Car",
+        "icon": "🏎"
+    },
+    {
+        "id": "9",
+        "name": "Salary",
+        "icon": "💶"
+    },
+]

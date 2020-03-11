@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BudgetEntity" representedClassName="BudgetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="end" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TagEntity" inverseName="budgets" inverseEntity="TagEntity"/>
+    </entity>
+    <entity name="TagEntity" representedClassName=".TagEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="icon" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="budgets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BudgetEntity" inverseName="tags" inverseEntity="BudgetEntity"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionEntity" inverseName="tags" inverseEntity="TransactionEntity"/>
+    </entity>
+    <entity name="TransactionEntity" representedClassName=".TransactionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="valueDate" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TagEntity" inverseName="transactions" inverseEntity="TagEntity"/>
+    </entity>
+    <elements>
+        <element name="TagEntity" positionX="-54" positionY="27" width="128" height="148"/>
+        <element name="TransactionEntity" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="BudgetEntity" positionX="-63" positionY="54" width="128" height="88"/>
+    </elements>
 </model>

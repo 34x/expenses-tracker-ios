@@ -11,11 +11,36 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+//        let managedContext =
+//          (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        
+//        // 2
+//        let entity =
+//          NSEntityDescription.entity(forEntityName: "TransactionEntity",
+//                                     in: managedContext)!
+//        let transaction = NSManagedObject(entity: entity, insertInto: managedContext)
+//        transaction.setValue(89, forKey: "amount")
+//        transaction.setValue(Date(), forKey: "createdAt")
+//        transaction.setValue(Date(), forKey: "valueDate")
+//        transaction.setValue(2, forKey: "type")
+//        
+//        do {
+//            try managedContext.save()
+//            
+//            let fetchRequest =
+//            NSFetchRequest<NSManagedObject>(entityName: "TransactionEntity")
+//            let transactions = try managedContext.fetch(fetchRequest)
+//            
+//            print("Total \(transactions.count) transactions")
+//            
+//        } catch let error as NSError {
+//          print("Could not save. \(error), \(error.userInfo)")
+//        }
+        
         return true
     }
 

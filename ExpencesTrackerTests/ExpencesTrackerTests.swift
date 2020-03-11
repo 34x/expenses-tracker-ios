@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ExpencesTracker
+//@testable import ExpencesTracker
 
 class ExpencesTrackerTests: XCTestCase {
 
