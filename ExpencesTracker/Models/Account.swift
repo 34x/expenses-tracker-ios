@@ -61,11 +61,40 @@ class Account {
     
     var tags: [TransactionTag] = []
 
-    var balance: Double {
+    var balance: Balance {
         return getBalance()
     }
     
-    func getSum() -> Double {
+    func getSum(from: Date, till: Date) -> Balance {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionEntity")
+        request.resultType = .dictionaryResultType
+                
+        let predicate = NSPredicate(format: "valueDate >= %@ AND valueDate <= %@", from as NSDate, till as NSDate)
+        request.predicate = predicate
+        
+        let expression = NSExpression(format: "sum:(amount)")
+        let expressionDescription = NSExpressionDescription()
+        
+        expressionDescription.expression = expression
+        expressionDescription.name = "balance"
+        expressionDescription.expressionResultType = .doubleAttributeType
+        request.propertiesToFetch = ["type", expressionDescription]
+        request.propertiesToGroupBy = ["type"]
+        
+        let sort = NSSortDescriptor(key: "type", ascending: true)
+        request.sortDescriptors = [sort]
+        
+        do {
+            let result: [NSFetchRequestResult] = try managedContext.fetch(request)
+            
+            return getBalanceFromResult(result: result, from: from, till: till)
+        } catch let error {
+            print("Error while calculationg balance: \(error)")
+            return Balance()
+        }
+    }
+    
+    func getSum() -> Balance {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionEntity")
         request.resultType = .dictionaryResultType
         
@@ -92,24 +121,33 @@ class Account {
             return getBalanceFromResult(result: result)
         } catch let error {
             print("Error while calculationg balance: \(error)")
-            return 0.0
+            return Balance()
         }
     }
     
-    func getBalanceFromResult(result: [NSFetchRequestResult]) -> Double {
+    func getBalanceFromResult(result: [NSFetchRequestResult]) -> Balance {
+        return getBalanceFromResult(result: result, from: nil, till: nil)
+    }
+    
+    func getBalanceFromResult(result: [NSFetchRequestResult], from: Date?, till: Date?) -> Balance {
         let income:Double = result.count > 0 ? (result[0] as! Dictionary)["balance"] ?? 0 : 0
         let expense: Double = result.count > 1 ? (result[1] as! Dictionary)["balance"] ?? 0 : 0
         
-        return income - expense
+        return Balance(
+            income: Money(amount: income),
+            expence: Money(amount: expense),
+            from: from,
+            till: till
+        )
     }
     
-    func getSum(tagID: NSManagedObjectID?) -> Double {
+    func getSum(tagID: NSManagedObjectID?) -> Balance {
         guard let objectID = tagID else {
-            return 0.0
+            return Balance()
         }
         
         guard let tag = getTag(objectID: objectID) else {
-            return 0
+            return Balance()
         }
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionEntity")
@@ -138,12 +176,22 @@ class Account {
             return getBalanceFromResult(result: result)
         } catch let error {
             print("Error while calculationg balance: \(error)")
-            return 0.0
+            return Balance()
         }
     }
     
-    func getBalance() -> Double {
-        return getSum()
+    func getBalance() -> Balance {
+        let now = Date()
+        
+        let cal = Calendar(identifier: .gregorian)
+        var componentsFrom = cal.dateComponents([.year, .month, .day], from: now)
+        componentsFrom.day = 1
+        
+        let from = cal.date(from: componentsFrom) ?? Date()
+        
+        let till = cal.date(byAdding: DateComponents(month: 1, day: -1), to: from) ?? Date()
+        
+        return getSum(from: from, till: till)
         
 //        return transactions.reduce(0) {
 //            (result, transaction) -> Double in
@@ -156,7 +204,7 @@ class Account {
     }
     
     func getBalanceTitle() -> String {
-        String(format:"Balance: %.2f", Account.current.getBalance())
+        String(format:"Balance: %.2f", Account.current.getBalance().total.amount)
     }
     
     func add(transaction: Transaction) {

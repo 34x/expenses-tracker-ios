@@ -12,12 +12,15 @@ struct TransactionsListScreen: View {
     @State private var balanceTitle: String = ""
     
     var body: some View {
-        NavigationView {
+        let balance = Account.current.balance
+        
+        return NavigationView {
             VStack {
+                BalanceView(balance: balance)
                 TransactionList()
             }
             .navigationBarTitle(balanceTitle)
-            .navigationBarHidden(false)
+            .navigationBarHidden(true)
             .onAppear() {
                 self.balanceTitle = Account.current.getBalanceTitle()
             }

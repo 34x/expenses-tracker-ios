@@ -35,6 +35,8 @@
 		50638EF82393F4E500D05041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EF72393F4E500D05041 /* ContentView.swift */; };
 		5080ACDB240C514E00DFB897 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080ACDA240C514E00DFB897 /* HomeScreen.swift */; };
 		5080ACDD240D4F3900DFB897 /* TestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080ACDC240D4F3900DFB897 /* TestDetails.swift */; };
+		508D85A6241FCB0300EF5F33 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D85A5241FCB0300EF5F33 /* BalanceView.swift */; };
+		508D85AA241FCB8E00EF5F33 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D85A9241FCB8E00EF5F33 /* Balance.swift */; };
 		509295A12413B66A001FD8D0 /* CreateTransactionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509295A02413B66A001FD8D0 /* CreateTransactionScreen.swift */; };
 		50B9B3A624098B6E00BBF378 /* transactionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 50B9B3A524098B6E00BBF378 /* transactionData.json */; };
 		50B9B3A824098C1E00BBF378 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3A724098C1E00BBF378 /* TransactionRow.swift */; };
@@ -109,6 +111,8 @@
 		50638EF72393F4E500D05041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5080ACDA240C514E00DFB897 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5080ACDC240D4F3900DFB897 /* TestDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetails.swift; sourceTree = "<group>"; };
+		508D85A5241FCB0300EF5F33 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		508D85A9241FCB8E00EF5F33 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		509295A02413B66A001FD8D0 /* CreateTransactionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionScreen.swift; sourceTree = "<group>"; };
 		50B9B3A524098B6E00BBF378 /* transactionData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = transactionData.json; sourceTree = "<group>"; };
 		50B9B3A724098C1E00BBF378 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				500810492414177900DE8342 /* Transactions */,
 				50DB2456240BE9BA004099EF /* BalanceLabel.swift */,
 				50C31074240EE4ED00B40446 /* TestList.swift */,
+				508D85A5241FCB0300EF5F33 /* BalanceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				5056E540240E3A4900072738 /* TransactionTag.swift */,
 				50C310762410380800B40446 /* TransactionEntity.swift */,
 				50C3107A241144DB00B40446 /* TagEntity.swift */,
+				508D85A9241FCB8E00EF5F33 /* Balance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -498,12 +504,14 @@
 				50C3107B241144DB00B40446 /* TagEntity.swift in Sources */,
 				50DB2457240BE9BA004099EF /* BalanceLabel.swift in Sources */,
 				50638EBD2392F49F00D05041 /* ExpencesTracker.xcdatamodeld in Sources */,
+				508D85AA241FCB8E00EF5F33 /* Balance.swift in Sources */,
 				500810412413C85B00DE8342 /* NewTransactionLink.swift in Sources */,
 				50638EED239301B800D05041 /* MapView.swift in Sources */,
 				50638EB82392F49F00D05041 /* AppDelegate.swift in Sources */,
 				5056E53F240D77E000072738 /* TagViewModel.swift in Sources */,
 				500810472413F70D00DE8342 /* Theme.swift in Sources */,
 				50B9B3B4240AB4E400BBF378 /* Account.swift in Sources */,
+				508D85A6241FCB0300EF5F33 /* BalanceView.swift in Sources */,
 				50638EBF2392F49F00D05041 /* LandmarkDetail.swift in Sources */,
 				50C31079241144AF00B40446 /* TagsSettingsScreen.swift in Sources */,
 				50B9B3A824098C1E00BBF378 /* TransactionRow.swift in Sources */,

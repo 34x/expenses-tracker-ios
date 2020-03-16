@@ -24,7 +24,7 @@ struct TagRow: View {
             Text(model.name)
         
             Spacer()
-            showBalance ? Text(Money(amount: balance).string) : nil
+            showBalance ? Text(balance.total.string) : nil
             
             selected ? Text("✓").font(.title) : nil
         }
