@@ -94,6 +94,59 @@ class Account {
         }
     }
     
+    func getMonthsList() -> [DateRange] {
+        var ranges = [DateRange]()
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionEntity")
+        request.resultType = .dictionaryResultType
+        request.propertiesToFetch = ["valueDate"]
+
+        let sort = NSSortDescriptor(key: "valueDate", ascending: false)
+        request.sortDescriptors = [sort]
+
+        let cal = Calendar(identifier: .gregorian)
+
+        do {
+            let result: [NSFetchRequestResult] = try managedContext.fetch(request)
+            for item in result {
+                if let itemDict = item as? Dictionary<String, Date>, let date = itemDict["valueDate"] {
+                    let components = cal.dateComponents([.year, .month], from: date)
+                    if let year = components.year, let month = components.month {
+                        let range = DateRange(year: year, month: month)
+
+                        let index = ranges.firstIndex { $0 == range }
+                        
+                        if nil == index {
+                            ranges.append(range)
+                        }
+                    }
+                }
+            }
+            
+            return ranges
+        } catch let error {
+            print("Error while calculationg balance: \(error)")
+            return []
+        }
+    }
+    
+    func balance(range: DateRange) -> Balance {
+        return getSum(from: range.from, till: range.till)
+    }
+    
+    func transactions(range: DateRange) -> [TransactionEntity] {
+        let request = TransactionEntity.allEntities()
+        request.predicate = NSPredicate(format: "valueDate >= %@ AND valueDate <= %@", argumentArray: [range.from, range.till])
+        
+        do {
+            return try managedContext.fetch(request) as [TransactionEntity]
+            
+        } catch let error {
+            print("Error while fetching transaction for date range: \(error)")
+            return []
+        }
+    }
+    
     func getSum() -> Balance {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionEntity")
         request.resultType = .dictionaryResultType
@@ -130,7 +183,7 @@ class Account {
     }
     
     func getBalanceFromResult(result: [NSFetchRequestResult], from: Date?, till: Date?) -> Balance {
-        let income:Double = result.count > 0 ? (result[0] as! Dictionary)["balance"] ?? 0 : 0
+        let income: Double = result.count > 0 ? (result[0] as! Dictionary)["balance"] ?? 0 : 0
         let expense: Double = result.count > 1 ? (result[1] as! Dictionary)["balance"] ?? 0 : 0
         
         return Balance(

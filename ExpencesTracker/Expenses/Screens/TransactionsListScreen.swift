@@ -12,12 +12,17 @@ struct TransactionsListScreen: View {
     @State private var balanceTitle: String = ""
     
     var body: some View {
-        let balance = Account.current.balance
+        let months = Account.current.getMonthsList()
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY - MMMM"
         return NavigationView {
-            VStack {
-                BalanceView(balance: balance)
-                TransactionList()
+            List {
+                ForEach(months) {
+                    range -> TransactionListSection in
+                    
+                    TransactionListSection(range: range)
+                }
             }
             .navigationBarTitle(balanceTitle)
             .navigationBarHidden(true)

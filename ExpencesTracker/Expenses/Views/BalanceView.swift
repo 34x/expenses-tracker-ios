@@ -28,7 +28,7 @@ struct BalanceView: View {
                 Spacer()
                 Text(balance.total.string)
             }.font(.headline)
-        }.padding()
+        }
     }
     
     var dateRange: some View {

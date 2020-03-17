@@ -30,4 +30,6 @@ extension TransactionEntity: Identifiable {
         request.resultType = .dictionaryResultType
         return request
     }
+    
+    
 }
