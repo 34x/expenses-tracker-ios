@@ -40,7 +40,7 @@ struct TransactionDetails: View {
                 self.viewModel.tags = selected
         })
 
-        return VStack {
+        return
             Form {
                 Section(header: Text("Amount")) {
                     amountField
@@ -65,12 +65,14 @@ struct TransactionDetails: View {
                         }
                     )
                 }
+                
+                Section(header: Text("Note")) {
+                    TextField("Note", text: $viewModel.note)
+                }
             }
             .navigationBarTitle(viewModel.detailsTitle)
             .navigationBarItems(trailing: saveButton)
             
-            Spacer().frame(height: 200)
-        }
     }
     
     func saveAction() {

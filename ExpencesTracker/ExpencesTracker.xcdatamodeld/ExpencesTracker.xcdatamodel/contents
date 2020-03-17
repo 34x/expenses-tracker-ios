@@ -17,13 +17,14 @@
     <entity name="TransactionEntity" representedClassName=".TransactionEntity" syncable="YES" codeGenerationType="class">
         <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="valueDate" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TagEntity" inverseName="transactions" inverseEntity="TagEntity"/>
     </entity>
     <elements>
-        <element name="TagEntity" positionX="-54" positionY="27" width="128" height="148"/>
-        <element name="TransactionEntity" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="BudgetEntity" positionX="-63" positionY="54" width="128" height="88"/>
+        <element name="TagEntity" positionX="-54" positionY="27" width="128" height="148"/>
+        <element name="TransactionEntity" positionX="-63" positionY="-18" width="128" height="133"/>
     </elements>
 </model>

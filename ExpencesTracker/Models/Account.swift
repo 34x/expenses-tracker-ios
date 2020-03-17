@@ -289,6 +289,7 @@ class Account {
             transaction.setValue(model.valueDate, forKey: "valueDate")
             transaction.setValue(model.transactionType.rawValue, forKey: "type")
             transaction.tags = getTagsFromModels(models: model.tags)
+            transaction.note = model.note
         } else if let objectID = model.objectID {
             let request: NSFetchRequest<TransactionEntity> = NSFetchRequest(entityName: "TransactionEntity")
             request.predicate = NSPredicate(format: "SELF = %@", objectID)
@@ -301,7 +302,7 @@ class Account {
                     existingTransaction.setValue(model.amount, forKey: "amount")
                     
                     existingTransaction.tags = getTagsFromModels(models: model.tags)
-                    
+                    existingTransaction.note = model.note
                     print("\(existingTransaction)")
                 }
             } catch let error as NSError {

@@ -25,6 +25,7 @@ struct TransactionViewModel: Encodable, Identifiable {
     
     var date: Date = Date()
     var valueDate: Date = Date()
+    var note: String = ""
     
     var transactionType: TransactionType = .expense
     var tags: [TagViewModel] = []
@@ -91,6 +92,7 @@ struct TransactionViewModel: Encodable, Identifiable {
         self.valueDate = transaction.valueDate ?? Date()
         self.date = transaction.createdAt ?? Date()
         self.tags = self.getTagModels(tagsSet: transaction.tags)
+        self.note = transaction.note ?? ""
     }
     
     func getTagModels(tagsSet: NSSet?) -> [TagViewModel] {
