@@ -12,5 +12,13 @@ import SwiftUI
 
 struct Theme {
     var expense = Color(UIColor.systemRed)
-    var income = Color(UIColor.systemRed)
+    var income = Color(UIColor.systemGreen)
+    
+    func balanceColor(balance: Balance) -> Color {
+        if balance.total.amount > 0 {
+            return income
+        }
+        
+        return expense
+    }
 }

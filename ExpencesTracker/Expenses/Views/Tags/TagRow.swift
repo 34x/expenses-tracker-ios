@@ -15,7 +15,8 @@ struct TagRow: View {
     var dateRange: DateRange?
 
     var body: some View {
-        let balance: Balance = nil == dateRange ? Account.current.getSum(tagID: model.objectID) : Account.current.balance(range: dateRange!, tags: [model])
+        let balance: Balance = Account.current.balance(range: dateRange ?? DateRange(), tags: [model])
+        let theme = Theme()
         
         return HStack {
             Text(model.icon)
@@ -25,7 +26,8 @@ struct TagRow: View {
             Text(model.name)
         
             Spacer()
-            showBalance ? Text(balance.total.string) : nil
+            showBalance ? Text(balance.total.string)
+                .foregroundColor(theme.balanceColor(balance: balance)) : nil
             
             selected ? Text("✓").font(.title) : nil
         }

@@ -16,13 +16,15 @@ struct HistorySection: View {
             
         let tags = Account.current.tags(range: range)
         let balance = Account.current.balance(range: range)
+        let theme = Theme()
         
         return Section(
             header: HStack {
                 Text(formatter.string(from: range.from))
                 Spacer()
                 Text(balance.total.string)
-            },
+                    .foregroundColor(theme.balanceColor(balance: balance))
+            }.font(.headline),
             content: {
                 ForEach(tags) {
                     tag -> TagRow in

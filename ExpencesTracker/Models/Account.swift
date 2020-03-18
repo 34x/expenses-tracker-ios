@@ -209,8 +209,8 @@ class Account {
     }
     
     func getBalanceFromResult(result: [NSFetchRequestResult], from: Date?, till: Date?) -> Balance {
-        let income: Double = result.count > 0 ? (result[0] as! Dictionary)["balance"] ?? 0 : 0
-        let expense: Double = result.count > 1 ? (result[1] as! Dictionary)["balance"] ?? 0 : 0
+        let income = getAmount(result: result, type: .income)
+        let expense = getAmount(result: result, type: .expense)
         
         return Balance(
             income: Money(amount: income),
@@ -218,6 +218,30 @@ class Account {
             from: from,
             till: till
         )
+    }
+    
+    private func getAmount(result: [NSFetchRequestResult], type: TransactionType) -> Double {
+        let typeResult = result.filter { (item) -> Bool in
+            guard let dict = item as? Dictionary<String, Any> else {
+                return false
+            }
+            
+            return dict["type"] as? Int == type.rawValue
+        }
+        
+        if typeResult.count != 1 {
+            return 0
+        }
+        
+        guard let dict = typeResult[0] as? Dictionary<String, Any> else {
+            return 0
+        }
+        
+        guard let amount = dict["balance"] as? Double else {
+            return 0
+        }
+        
+        return amount
     }
     
     func getSum(tagID: NSManagedObjectID?) -> Balance {
@@ -260,26 +284,7 @@ class Account {
     }
     
     func getBalance() -> Balance {
-        let now = Date()
-        
-        let cal = Calendar(identifier: .gregorian)
-        var componentsFrom = cal.dateComponents([.year, .month, .day], from: now)
-        componentsFrom.day = 1
-        
-        let from = cal.date(from: componentsFrom) ?? Date()
-        
-        let till = cal.date(byAdding: DateComponents(month: 1, day: -1), to: from) ?? Date()
-        
-        return getSum(from: from, till: till)
-        
-//        return transactions.reduce(0) {
-//            (result, transaction) -> Double in
-//            if (.expense == transaction.type) {
-//                return result - abs(transaction.amount ?? 0)
-//            } else {
-//                return result + abs(transaction.amount ?? 0)
-//            }
-//        }
+        return balance(range: DateRange())        
     }
     
     func getBalanceTitle() -> String {

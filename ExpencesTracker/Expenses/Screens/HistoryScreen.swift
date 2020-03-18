@@ -18,7 +18,7 @@ struct HistoryScreen: View {
                     range -> HistorySection in
                     HistorySection(range: range)
                 }
-            }
+            }.navigationBarTitle("History")
         }
     }
 }

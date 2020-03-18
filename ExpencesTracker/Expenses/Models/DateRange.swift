@@ -16,6 +16,17 @@ struct DateRange: Equatable, Identifiable {
     var from: Date
     var till: Date
     
+    /// - returns: current month range
+    init() {
+        let now = Date()
+        let cal = Calendar(identifier: .gregorian)
+        
+        let components = cal.dateComponents([.year, .month], from: now)
+                
+        self.init(year: components.year!, month: components.month!)
+    }
+    
+    /// - returns: specific month range
     init(year: Int, month: Int) {
         let cal = Calendar(identifier: .gregorian)
         
