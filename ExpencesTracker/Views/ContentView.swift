@@ -12,10 +12,6 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-//            TestScreen().tabItem {
-//                Text("Test")
-//            }
-            
             CreateTransactionScreen().tabItem {
                 Image(systemName: "house")
                 Text("Create")
@@ -25,6 +21,17 @@ struct ContentView: View {
                 Image(systemName: "arrow.right.arrow.left")
                 Text("Transactions")
             }
+            
+            HistoryScreen().tabItem {
+                Image(systemName: "clock")
+                Text("History")
+            }
+            
+            
+            
+            
+            
+
             
             SettingsScreen().tabItem {
                 Image(systemName: "gear")

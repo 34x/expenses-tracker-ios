@@ -12,9 +12,10 @@ struct TagRow: View {
     var model: TagViewModel
     var selected: Bool = false
     var showBalance: Bool = false
+    var dateRange: DateRange?
 
     var body: some View {
-        let balance = Account.current.getSum(tagID: model.objectID)
+        let balance: Balance = nil == dateRange ? Account.current.getSum(tagID: model.objectID) : Account.current.balance(range: dateRange!, tags: [model])
         
         return HStack {
             Text(model.icon)

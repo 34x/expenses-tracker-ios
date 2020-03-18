@@ -26,7 +26,7 @@ struct DateRange: Equatable, Identifiable {
         
         from = cal.date(from: componentsFrom) ?? Date()
         
-        till = cal.date(byAdding: DateComponents(month: 1, day: -1), to: from) ?? Date()
+        till = cal.date(byAdding: DateComponents(month: 1, second: -1), to: from) ?? Date()
     }
     
     static func == (lhs: DateRange, rhs: DateRange) -> Bool {

@@ -65,12 +65,26 @@ class Account {
         return getBalance()
     }
     
-    func getSum(from: Date, till: Date) -> Balance {
+    func getSum(from: Date, till: Date, tags: [TagViewModel] = []) -> Balance {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TransactionEntity")
         request.resultType = .dictionaryResultType
-                
-        let predicate = NSPredicate(format: "valueDate >= %@ AND valueDate <= %@", from as NSDate, till as NSDate)
-        request.predicate = predicate
+        
+        var predicates: [NSPredicate] = [];
+        
+        let datePredicate = NSPredicate(format: "valueDate >= %@ AND valueDate <= %@", from as NSDate, till as NSDate)
+        predicates.append(datePredicate)
+        
+        if tags.count > 0 {
+            let ids = tags.map { (tagModel) -> NSManagedObjectID? in
+                return tagModel.objectID
+            }
+            let tagsPredicate = NSPredicate(format: "SUBQUERY(tags, $tag, $tag IN %@).@count == %@", argumentArray: [ids, ids.count])
+            predicates.append(tagsPredicate)
+            
+        }
+        
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        
         
         let expression = NSExpression(format: "sum:(amount)")
         let expressionDescription = NSExpressionDescription()
@@ -130,8 +144,8 @@ class Account {
         }
     }
     
-    func balance(range: DateRange) -> Balance {
-        return getSum(from: range.from, till: range.till)
+    func balance(range: DateRange, tags: [TagViewModel] = []) -> Balance {
+        return getSum(from: range.from, till: range.till, tags: tags)
     }
     
     func transactions(range: DateRange) -> [TransactionEntity] {
@@ -141,6 +155,18 @@ class Account {
         do {
             return try managedContext.fetch(request) as [TransactionEntity]
             
+        } catch let error {
+            print("Error while fetching transaction for date range: \(error)")
+            return []
+        }
+    }
+    
+    func tags(range: DateRange) -> [TagEntity] {
+        let request = TagEntity.allEntriesFetchRequest()
+        request.predicate = NSPredicate(format: "ANY transactions.valueDate >= %@ AND ANY transactions.valueDate <= %@", argumentArray: [range.from, range.till])
+        
+        do {
+            return try managedContext.fetch(request) as [TagEntity]
         } catch let error {
             print("Error while fetching transaction for date range: \(error)")
             return []
