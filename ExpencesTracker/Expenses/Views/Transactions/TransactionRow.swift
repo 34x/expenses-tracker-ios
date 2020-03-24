@@ -13,12 +13,7 @@ struct TransactionRow: View {
     
     var body: some View {
         return HStack() {
-            VStack(alignment: .leading) {
-                TagItemsView(tags: viewModel.tags)
-                Text(viewModel.dateShort)
-                    .font(.footnote)
-                    .foregroundColor(Color(UIColor.secondaryLabel))
-            }
+            TagItemsView(tags: viewModel.tags)
             Spacer()
             
             Text(viewModel.amountValueSigned)

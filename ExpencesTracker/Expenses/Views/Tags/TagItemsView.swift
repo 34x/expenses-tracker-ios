@@ -10,12 +10,12 @@ import SwiftUI
 
 struct TagItemsView: View {
     var tags: [TagViewModel]
+    var showNames = false
     
     var body: some View {
         HStack {
             ForEach(tags) {
-                Text($0.icon)
-                    .font(.title)
+                TagItemView(viewModel: $0)
             }
         }
     }

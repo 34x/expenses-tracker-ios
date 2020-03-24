@@ -13,13 +13,13 @@ struct TagItemView: View {
     var selected: Bool = false
     
     var body: some View {
-        let stack = VStack {
+        let stack = HStack {
             Text(viewModel.icon)
                 .font(.title)
+                .frame(width: 32)
             Text(viewModel.name)
-                .frame(width: 92, alignment: .center)
+                .frame(alignment: .center)
         }
-        .frame(width: 92)
         .foregroundColor(selected ? .red : nil)
         .blur(radius: selected ? 2 : 0)
         
