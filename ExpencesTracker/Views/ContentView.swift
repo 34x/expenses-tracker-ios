@@ -17,11 +17,6 @@ struct ContentView: View {
                 Text("Create")
             }
             
-            TransactionsListScreen().tabItem {
-                Image(systemName: "arrow.right.arrow.left")
-                Text("Transactions")
-            }
-            
             HistoryScreen().tabItem {
                 Image(systemName: "clock")
                 Text("History")
