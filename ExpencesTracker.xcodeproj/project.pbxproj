@@ -46,7 +46,6 @@
 		50B9B3A824098C1E00BBF378 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3A724098C1E00BBF378 /* TransactionRow.swift */; };
 		50B9B3AA24098E9F00BBF378 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3A924098E9F00BBF378 /* Transaction.swift */; };
 		50B9B3AC240997FC00BBF378 /* ExpenseDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3AB240997FC00BBF378 /* ExpenseDataLoader.swift */; };
-		50B9B3AE240A826900BBF378 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3AD240A826900BBF378 /* TransactionList.swift */; };
 		50B9B3B0240A868200BBF378 /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3AF240A868200BBF378 /* TransactionDetails.swift */; };
 		50B9B3B4240AB4E400BBF378 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3B3240AB4E400BBF378 /* Account.swift */; };
 		50C31075240EE4ED00B40446 /* TestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C31074240EE4ED00B40446 /* TestList.swift */; };
@@ -126,7 +125,6 @@
 		50B9B3A724098C1E00BBF378 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		50B9B3A924098E9F00BBF378 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		50B9B3AB240997FC00BBF378 /* ExpenseDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDataLoader.swift; sourceTree = "<group>"; };
-		50B9B3AD240A826900BBF378 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		50B9B3AF240A868200BBF378 /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
 		50B9B3B3240AB4E400BBF378 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		50C31074240EE4ED00B40446 /* TestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestList.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				50B9B3A724098C1E00BBF378 /* TransactionRow.swift */,
-				50B9B3AD240A826900BBF378 /* TransactionList.swift */,
 				500810402413C85B00DE8342 /* NewTransactionLink.swift */,
 				504CC27F2421563600D488FB /* TransactionListSection.swift */,
 				506AAEA82422083E0042FFED /* HistorySection.swift */,
@@ -541,7 +538,6 @@
 				509295A12413B66A001FD8D0 /* CreateTransactionScreen.swift in Sources */,
 				50638EF82393F4E500D05041 /* ContentView.swift in Sources */,
 				50638EBA2392F49F00D05041 /* SceneDelegate.swift in Sources */,
-				50B9B3AE240A826900BBF378 /* TransactionList.swift in Sources */,
 				50C3107F2411497100B40446 /* TagDetails.swift in Sources */,
 				5056E541240E3A4900072738 /* TransactionTag.swift in Sources */,
 				500810432413CA4000DE8342 /* NewTagLink.swift in Sources */,
@@ -719,7 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpencesTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 3TQXLRUNTH;
 				ENABLE_PREVIEWS = YES;
@@ -742,7 +738,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpencesTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 3TQXLRUNTH;
 				ENABLE_PREVIEWS = YES;

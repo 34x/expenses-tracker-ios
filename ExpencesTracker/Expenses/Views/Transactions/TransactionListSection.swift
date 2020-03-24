@@ -12,21 +12,34 @@ struct TransactionListSection: View {
     var range: DateRange
     
     var body: some View {
-        let header = BalanceView(balance: Account.current.balance(range: range))
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
         
-        return Section(header: header) {
-            ForEach(Account.current.transactions(range: range)) {
-                transaction -> NavigationLink<TransactionRow, TransactionDetails> in
-                
-                let model = TransactionViewModel(transaction: transaction)
-
-                return NavigationLink(
-                    destination: TransactionDetails(transactionViewModel: model),
-                    label: {
-                        TransactionRow(viewModel: model)
-                })
-            }
+        let balance = Account.current.balance(range: range)
+        
+        let dateTitle = formatter.string(from: range.from)
+        
+        let header = HStack {
+            Text(dateTitle)
+            Spacer()
+            Text(balance.total.string)
         }
+        
+        return Section(
+            header: header,
+            content: {
+                ForEach(Account.current.transactions(range: range)) {
+                    transaction -> NavigationLink<TransactionRow, TransactionDetails> in
+                    
+                    let model = TransactionViewModel(transaction: transaction)
+
+                    return NavigationLink(
+                        destination: TransactionDetails(transactionViewModel: model),
+                        label: {
+                            TransactionRow(viewModel: model)
+                    })
+                }
+            })
     }
 }
 

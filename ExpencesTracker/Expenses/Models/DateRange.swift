@@ -40,6 +40,20 @@ struct DateRange: Equatable, Identifiable {
         till = cal.date(byAdding: DateComponents(month: 1, second: -1), to: from) ?? Date()
     }
     
+    /// - returns: specific day range
+    init(year: Int, month: Int, day: Int) {
+        let cal = Calendar(identifier: .gregorian)
+        
+        var componentsFrom = DateComponents()
+        componentsFrom.year = year
+        componentsFrom.month = month
+        componentsFrom.day = day
+        
+        from = cal.date(from: componentsFrom) ?? Date()
+        
+        till = cal.date(byAdding: DateComponents(day: 1, second: -1), to: from) ?? Date()
+    }
+    
     static func == (lhs: DateRange, rhs: DateRange) -> Bool {
         return lhs.from == rhs.from && lhs.till == rhs.till
     }

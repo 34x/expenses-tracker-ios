@@ -12,23 +12,19 @@ struct TransactionsListScreen: View {
     @State private var balanceTitle: String = ""
     
     var body: some View {
-        let months = Account.current.getMonthsList()
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY - MMMM"
+        let days = Account.current.getDaysList()
+
         return NavigationView {
             List {
-                ForEach(months) {
+                ForEach(days) {
                     range -> TransactionListSection in
                     
                     TransactionListSection(range: range)
                 }
             }
-            .navigationBarTitle(balanceTitle)
             .navigationBarHidden(true)
-            .onAppear() {
-                self.balanceTitle = Account.current.getBalanceTitle()
-            }
+            // seems like without the title bar can not be hidden, SwiftUI bug?
+            .navigationBarTitle("Transactions list")
         }
     }
 }

@@ -144,6 +144,31 @@ class Account {
         }
     }
     
+    func getDaysList() -> [DateRange] {
+        let cal = Calendar(identifier: .gregorian)
+        let months = getMonthsList()
+        var days = [DateRange]()
+        
+        for monthRange in months {
+            let transactionInMonth = transactions(range: monthRange)
+            
+            for transaction in transactionInMonth {
+                guard let valueDate = transaction.valueDate else { continue }
+                let dayComponents = cal.dateComponents([.year, .month, .day], from: valueDate)
+                guard let year = dayComponents.year, let month = dayComponents.month, let day = dayComponents.day else { continue }
+                let dayRange = DateRange(year: year, month: month, day: day)
+                
+                let index = days.firstIndex { $0 == dayRange }
+                
+                if nil == index {
+                    days.append(dayRange)
+                }
+            }
+        }
+        
+        return days
+    }
+    
     func balance(range: DateRange, tags: [TagViewModel] = []) -> Balance {
         return getSum(from: range.from, till: range.till, tags: tags)
     }
