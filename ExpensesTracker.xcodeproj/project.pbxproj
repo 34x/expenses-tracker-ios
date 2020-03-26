@@ -23,22 +23,14 @@
 		50638EB82392F49F00D05041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EB72392F49F00D05041 /* AppDelegate.swift */; };
 		50638EBA2392F49F00D05041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EB92392F49F00D05041 /* SceneDelegate.swift */; };
 		50638EBD2392F49F00D05041 /* ExpencesTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50638EBB2392F49F00D05041 /* ExpencesTracker.xcdatamodeld */; };
-		50638EBF2392F49F00D05041 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EBE2392F49F00D05041 /* LandmarkDetail.swift */; };
 		50638EC12392F4A000D05041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50638EC02392F4A000D05041 /* Assets.xcassets */; };
 		50638EC42392F4A000D05041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50638EC32392F4A000D05041 /* Preview Assets.xcassets */; };
 		50638EC72392F4A000D05041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50638EC52392F4A000D05041 /* LaunchScreen.storyboard */; };
 		50638ED22392F4A100D05041 /* ExpencesTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638ED12392F4A100D05041 /* ExpencesTrackerTests.swift */; };
 		50638EDD2392F4A100D05041 /* ExpencesTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EDC2392F4A100D05041 /* ExpencesTrackerUITests.swift */; };
-		50638EEB2392FD2A00D05041 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EEA2392FD2A00D05041 /* CircleImage.swift */; };
-		50638EED239301B800D05041 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EEC239301B800D05041 /* MapView.swift */; };
-		50638EEF2393F15A00D05041 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EEE2393F15A00D05041 /* Landmark.swift */; };
-		50638EF12393F1DC00D05041 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 50638EF02393F1DC00D05041 /* landmarkData.json */; };
-		50638EF62393F39400D05041 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EF52393F39400D05041 /* LandmarkRow.swift */; };
 		50638EF82393F4E500D05041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EF72393F4E500D05041 /* ContentView.swift */; };
 		506AAEA7242207550042FFED /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506AAEA6242207550042FFED /* HistoryScreen.swift */; };
 		506AAEA92422083E0042FFED /* HistorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506AAEA82422083E0042FFED /* HistorySection.swift */; };
-		5080ACDB240C514E00DFB897 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080ACDA240C514E00DFB897 /* HomeScreen.swift */; };
-		5080ACDD240D4F3900DFB897 /* TestDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080ACDC240D4F3900DFB897 /* TestDetails.swift */; };
 		508D85A6241FCB0300EF5F33 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D85A5241FCB0300EF5F33 /* BalanceView.swift */; };
 		508D85AA241FCB8E00EF5F33 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508D85A9241FCB8E00EF5F33 /* Balance.swift */; };
 		509295A12413B66A001FD8D0 /* CreateTransactionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509295A02413B66A001FD8D0 /* CreateTransactionScreen.swift */; };
@@ -96,7 +88,6 @@
 		50638EB72392F49F00D05041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50638EB92392F49F00D05041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		50638EBC2392F49F00D05041 /* ExpencesTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpencesTracker.xcdatamodel; sourceTree = "<group>"; };
-		50638EBE2392F49F00D05041 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		50638EC02392F4A000D05041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50638EC32392F4A000D05041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50638EC62392F4A000D05041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,16 +98,9 @@
 		50638ED82392F4A100D05041 /* ExpensesTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50638EDC2392F4A100D05041 /* ExpencesTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpencesTrackerUITests.swift; sourceTree = "<group>"; };
 		50638EDE2392F4A100D05041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50638EEA2392FD2A00D05041 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		50638EEC239301B800D05041 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		50638EEE2393F15A00D05041 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
-		50638EF02393F1DC00D05041 /* landmarkData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
-		50638EF52393F39400D05041 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		50638EF72393F4E500D05041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		506AAEA6242207550042FFED /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
 		506AAEA82422083E0042FFED /* HistorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySection.swift; sourceTree = "<group>"; };
-		5080ACDA240C514E00DFB897 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		5080ACDC240D4F3900DFB897 /* TestDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetails.swift; sourceTree = "<group>"; };
 		508D85A5241FCB0300EF5F33 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		508D85A9241FCB8E00EF5F33 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		509295A02413B66A001FD8D0 /* CreateTransactionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionScreen.swift; sourceTree = "<group>"; };
@@ -198,18 +182,6 @@
 				504CC27D242147DA00D488FB /* DateRange.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		50080FAF240D60F000EC368E /* Tutorial */ = {
-			isa = PBXGroup;
-			children = (
-				50638EEE2393F15A00D05041 /* Landmark.swift */,
-				50638EF52393F39400D05041 /* LandmarkRow.swift */,
-				50638EBE2392F49F00D05041 /* LandmarkDetail.swift */,
-				5080ACDC240D4F3900DFB897 /* TestDetails.swift */,
-				50638EF02393F1DC00D05041 /* landmarkData.json */,
-			);
-			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		50080FB0240D611A00EC368E /* Resources */ = {
@@ -300,10 +272,8 @@
 		50638EB62392F49F00D05041 /* ExpensesTracker */ = {
 			isa = PBXGroup;
 			children = (
-				50080FAF240D60F000EC368E /* Tutorial */,
 				50080FAC240D60A900EC368E /* Expenses */,
 				50638EF42393F38400D05041 /* Views */,
-				50638EF32393F21200D05041 /* Resources */,
 				50638EF22393F1FC00D05041 /* Models */,
 				50638EB72392F49F00D05041 /* AppDelegate.swift */,
 				50638EB92392F49F00D05041 /* SceneDelegate.swift */,
@@ -312,9 +282,6 @@
 				50638EC82392F4A000D05041 /* Info.plist */,
 				50638EBB2392F49F00D05041 /* ExpencesTracker.xcdatamodeld */,
 				50638EC22392F4A000D05041 /* Preview Content */,
-				50638EEA2392FD2A00D05041 /* CircleImage.swift */,
-				50638EEC239301B800D05041 /* MapView.swift */,
-				5080ACDA240C514E00DFB897 /* HomeScreen.swift */,
 			);
 			path = ExpensesTracker;
 			sourceTree = "<group>";
@@ -352,13 +319,6 @@
 				500810442413CD8100DE8342 /* Money.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		50638EF32393F21200D05041 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		50638EF42393F38400D05041 /* Views */ = {
@@ -477,7 +437,6 @@
 				50638EC72392F4A000D05041 /* LaunchScreen.storyboard in Resources */,
 				50080FB2240D626200EC368E /* tagData.json in Resources */,
 				50B9B3A624098B6E00BBF378 /* transactionData.json in Resources */,
-				50638EF12393F1DC00D05041 /* landmarkData.json in Resources */,
 				50638EC42392F4A000D05041 /* Preview Assets.xcassets in Resources */,
 				50638EC12392F4A000D05041 /* Assets.xcassets in Resources */,
 			);
@@ -506,14 +465,12 @@
 			files = (
 				50B9B3AA24098E9F00BBF378 /* Transaction.swift in Sources */,
 				50D57F9B241543A40080B411 /* TestScreen.swift in Sources */,
-				50638EEF2393F15A00D05041 /* Landmark.swift in Sources */,
 				50C3107B241144DB00B40446 /* TagEntity.swift in Sources */,
 				504CC2802421563600D488FB /* TransactionListSection.swift in Sources */,
 				50DB2457240BE9BA004099EF /* BalanceLabel.swift in Sources */,
 				50638EBD2392F49F00D05041 /* ExpencesTracker.xcdatamodeld in Sources */,
 				508D85AA241FCB8E00EF5F33 /* Balance.swift in Sources */,
 				500810412413C85B00DE8342 /* NewTransactionLink.swift in Sources */,
-				50638EED239301B800D05041 /* MapView.swift in Sources */,
 				506AAEA92422083E0042FFED /* HistorySection.swift in Sources */,
 				50638EB82392F49F00D05041 /* AppDelegate.swift in Sources */,
 				506AAEA7242207550042FFED /* HistoryScreen.swift in Sources */,
@@ -521,7 +478,6 @@
 				500810472413F70D00DE8342 /* Theme.swift in Sources */,
 				50B9B3B4240AB4E400BBF378 /* Account.swift in Sources */,
 				508D85A6241FCB0300EF5F33 /* BalanceView.swift in Sources */,
-				50638EBF2392F49F00D05041 /* LandmarkDetail.swift in Sources */,
 				504CC27E242147DA00D488FB /* DateRange.swift in Sources */,
 				50C31079241144AF00B40446 /* TagsSettingsScreen.swift in Sources */,
 				50B9B3A824098C1E00BBF378 /* TransactionRow.swift in Sources */,
@@ -529,7 +485,6 @@
 				50C31075240EE4ED00B40446 /* TestList.swift in Sources */,
 				5056E548240E46D400072738 /* TagSelectorView.swift in Sources */,
 				500810452413CD8100DE8342 /* Money.swift in Sources */,
-				5080ACDD240D4F3900DFB897 /* TestDetails.swift in Sources */,
 				50B9B3AC240997FC00BBF378 /* ExpenseDataLoader.swift in Sources */,
 				509295A12413B66A001FD8D0 /* CreateTransactionScreen.swift in Sources */,
 				50638EF82393F4E500D05041 /* ContentView.swift in Sources */,
@@ -540,9 +495,6 @@
 				50DB2455240BD23C004099EF /* TransactionViewModel.swift in Sources */,
 				505AAA622416BFC0007C3DA4 /* SettingsScreen.swift in Sources */,
 				50C3107D241145A700B40446 /* TagRow.swift in Sources */,
-				50638EF62393F39400D05041 /* LandmarkRow.swift in Sources */,
-				50638EEB2392FD2A00D05041 /* CircleImage.swift in Sources */,
-				5080ACDB240C514E00DFB897 /* HomeScreen.swift in Sources */,
 				50C310772410380900B40446 /* TransactionEntity.swift in Sources */,
 				5056E543240E3E1600072738 /* TagItemsView.swift in Sources */,
 				50B9B3B0240A868200BBF378 /* TransactionDetails.swift in Sources */,
