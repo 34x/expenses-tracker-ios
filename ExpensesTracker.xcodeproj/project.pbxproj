@@ -13,6 +13,10 @@
 		500810472413F70D00DE8342 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500810462413F70D00DE8342 /* Theme.swift */; };
 		500AA9BA242CC97300DD80BB /* MoneyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AA9B9242CC97300DD80BB /* MoneyFormatter.swift */; };
 		500AA9BC242CD01900DD80BB /* ExpensesDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AA9BB242CD01900DD80BB /* ExpensesDateFormatter.swift */; };
+		500AA9BF242CDB8F00DD80BB /* screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 500AA9BE242CDB8F00DD80BB /* screenshot1.png */; };
+		500AA9C2242CDD5B00DD80BB /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = 500AA9C1242CDD5B00DD80BB /* screenshot2.png */; };
+		500AA9C5242CDE3000DD80BB /* screenshot4.png in Resources */ = {isa = PBXBuildFile; fileRef = 500AA9C3242CDE2F00DD80BB /* screenshot4.png */; };
+		500AA9C6242CDE3000DD80BB /* screenshot3.png in Resources */ = {isa = PBXBuildFile; fileRef = 500AA9C4242CDE3000DD80BB /* screenshot3.png */; };
 		504CC27E242147DA00D488FB /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CC27D242147DA00D488FB /* DateRange.swift */; };
 		504CC2802421563600D488FB /* TransactionListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CC27F2421563600D488FB /* TransactionListSection.swift */; };
 		5056E53D240D77C500072738 /* TagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E53C240D77C500072738 /* TagItemView.swift */; };
@@ -70,6 +74,10 @@
 		500810462413F70D00DE8342 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		500AA9B9242CC97300DD80BB /* MoneyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatter.swift; sourceTree = "<group>"; };
 		500AA9BB242CD01900DD80BB /* ExpensesDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesDateFormatter.swift; sourceTree = "<group>"; };
+		500AA9BE242CDB8F00DD80BB /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
+		500AA9C1242CDD5B00DD80BB /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot2.png; sourceTree = "<group>"; };
+		500AA9C3242CDE2F00DD80BB /* screenshot4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot4.png; sourceTree = "<group>"; };
+		500AA9C4242CDE3000DD80BB /* screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot3.png; sourceTree = "<group>"; };
 		504CC27D242147DA00D488FB /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		504CC27F2421563600D488FB /* TransactionListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListSection.swift; sourceTree = "<group>"; };
 		5056E53C240D77C500072738 /* TagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemView.swift; sourceTree = "<group>"; };
@@ -221,6 +229,17 @@
 			path = Utulites;
 			sourceTree = "<group>";
 		};
+		500AA9C0242CDD4600DD80BB /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				500AA9C4242CDE3000DD80BB /* screenshot3.png */,
+				500AA9C3242CDE2F00DD80BB /* screenshot4.png */,
+				500AA9C1242CDD5B00DD80BB /* screenshot2.png */,
+				500AA9BE242CDB8F00DD80BB /* screenshot1.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		5056E546240E43B300072738 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +263,7 @@
 			children = (
 				505AAA602416BDA3007C3DA4 /* ToDo.md */,
 				505AAA5F2416BD8F007C3DA4 /* README.md */,
+				500AA9C0242CDD4600DD80BB /* Screenshots */,
 				50638EB62392F49F00D05041 /* ExpensesTracker */,
 				50638ED02392F4A100D05041 /* ExpensesTrackerTests */,
 				50638EDB2392F4A100D05041 /* ExpensesTrackerUITests */,
@@ -428,6 +448,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				50638EC72392F4A000D05041 /* LaunchScreen.storyboard in Resources */,
+				500AA9BF242CDB8F00DD80BB /* screenshot1.png in Resources */,
+				500AA9C5242CDE3000DD80BB /* screenshot4.png in Resources */,
+				500AA9C2242CDD5B00DD80BB /* screenshot2.png in Resources */,
+				500AA9C6242CDE3000DD80BB /* screenshot3.png in Resources */,
 				50638EC42392F4A000D05041 /* Preview Assets.xcassets in Resources */,
 				50638EC12392F4A000D05041 /* Assets.xcassets in Resources */,
 			);
