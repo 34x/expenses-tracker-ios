@@ -10,6 +10,12 @@ import Foundation
 
 import CoreData
 
+enum TransactionType: Int, Decodable {
+    case income = 1
+    case expense = 2
+    case unknown = 0
+}
+
 extension TransactionEntity: Identifiable {
     static func allEntities() -> NSFetchRequest<TransactionEntity> {
         

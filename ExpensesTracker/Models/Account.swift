@@ -25,42 +25,9 @@ class Account {
     }
     
     init() {
-        transactions = transactionData
-        tags = tagData
         self.createDefaultTagsIfNeeded()
     }
     
-    var transactions: [Transaction] = []
-    var transactionsGrouped: [Date: [Transaction]] {
-        var result: [Date: [Transaction]] = [:]
-        
-        for transaction in transactions {
-            guard let date = transaction.date else {
-                continue
-            }
-            
-            if var list = result[date] {
-                list.append(transaction)
-            } else {
-                result[date] = [transaction]
-            }
-        }
-        
-        return result
-    }
-    
-    var transactionsSorted: [Transaction] {
-        transactions.sorted { (a, b) -> Bool in
-            guard let dateA = a.date, let dateB = b.date else {
-                return false
-            }
-            
-            return dateB.distance(to: dateA) > 0
-        }
-    }
-    
-    var tags: [TransactionTag] = []
-
     var balance: Balance {
         return getBalance()
     }
@@ -316,11 +283,6 @@ class Account {
         String(format:"Balance: %.2f", Account.current.getBalance().total.amount)
     }
     
-    func add(transaction: Transaction) {
-        transactions.append(transaction)
-        NotificationCenter.default.post(Notification(name: AccountUpdatedNotification))
-    }
-    
     func process(model: TagViewModel) {
         if model.isDraft {
             print("Creating new tag")
@@ -442,16 +404,6 @@ class Account {
     
     private var managedContext: NSManagedObjectContext {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    }
-    
-    func getTag(id: String) -> TransactionTag {
-        for tag in tags {
-            if tag.id == id {
-                return tag
-            }
-        }
-        
-        return TransactionTag(id: "-", name: "-", icon: "👾")
     }
     
     func loadTransactions() {

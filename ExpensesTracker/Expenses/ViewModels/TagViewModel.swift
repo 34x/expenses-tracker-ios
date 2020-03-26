@@ -27,10 +27,6 @@ struct TagViewModel: Equatable, Identifiable {
         self.init(id: "", path: "", name: "", icon: "", note: "", type: .expense)
     }
     
-    init (tag: TransactionTag) {
-        self.init(id: tag.id, path: tag.id, name: tag.name, icon: tag.icon, note: "", type: .expense)
-    }
-    
     init(tag: TagEntity) {
         self.id = tag.objectID.uriRepresentation().absoluteString
         self.name = tag.name ?? ""

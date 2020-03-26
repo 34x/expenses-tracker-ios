@@ -24,10 +24,12 @@ struct TagItemsView: View {
 struct TagItemsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TagItemsView(tags: [TagViewModel(tag: tagData[5])])
             TagItemsView(tags: [
-                TagViewModel(tag: tagData[0]),
-                TagViewModel(tag: tagData[1])
+                TagViewModel(name: "Education", icon: "🎓")
+            ])
+            TagItemsView(tags: [
+                TagViewModel(name: "Education", icon: "🎓"),
+                TagViewModel(name: "Games", icon: "👾")
             ])
         }.previewLayout(.fixed(width: 92, height: 92))
     }

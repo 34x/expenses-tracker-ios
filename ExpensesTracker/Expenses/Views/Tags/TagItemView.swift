@@ -31,8 +31,8 @@ struct TagItemView: View {
 struct CategoryItemView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TagItemView(viewModel: TagViewModel(tag: tagData[2]))
-            TagItemView(viewModel: TagViewModel(tag: tagData[2]), selected: true)
+            TagItemView(viewModel: TagViewModel(name: "Coffee", icon: "☕️"))
+            TagItemView(viewModel: TagViewModel(name: "Education", icon: "🎓"), selected: true)
         }.previewLayout(.fixed(width: 300, height: 92))
     }
 }

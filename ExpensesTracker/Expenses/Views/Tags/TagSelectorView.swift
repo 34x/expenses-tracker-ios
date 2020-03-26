@@ -16,14 +16,6 @@ struct TagSelectorView: View {
     
     var onChange: ((_ selected: [TagViewModel]) -> Void)
     
-    var availableTags: [TagViewModel] {
-        return Account.current.tags.map {
-            (tag) -> TagViewModel in
-            
-            return TagViewModel(tag: tag)
-        }
-    }
-    
     var body: some View {
         List {
             ForEach(self.tags) {
@@ -53,44 +45,6 @@ struct TagSelectorView: View {
         self.onChange(self.selectedTags)
     }
     
-    var stack: some View {
-        HStack {
-            ForEach(availableTags) {
-                self.getStackItem($0)
-            }
-        }
-    }
-    
-    func getStackItem(_ tagView: TagViewModel) -> some View {
-        
-        return Button(
-            action: {
-
-                var newSelectedTags: [TagViewModel] = []
-                
-                for tv in self.availableTags {
-                    if tv == tagView {
-                        if !self.isTagSelected(tagView: tv) {
-                            newSelectedTags.append(tv)
-                        }
-                    }
-                    
-                    if self.isTagSelected(tagView: tv) && tv != tagView {
-                        newSelectedTags.append(tv)
-                    }
-                }
-                
-//                self.onChange?(newSelectedTags)
-                
-            },
-            label: {
-                TagItemView(
-                    viewModel: tagView,
-                    selected: isTagSelected(tagView: tagView)
-                )
-        })
-    }
-    
     func isTagSelected(tagView: TagViewModel) -> Bool {
         for selectedTag in selectedTags {
             if selectedTag == tagView {
@@ -107,8 +61,8 @@ struct TagSelectorView_Previews: PreviewProvider {
         Group {
             TagSelectorView(selectedTags: [], onChange: {_ in })
             TagSelectorView(selectedTags: [
-                TagViewModel(tag: tagData[1]),
-                TagViewModel(tag: tagData[3])
+                TagViewModel(name: "Music", icon: "🎹"),
+                TagViewModel(name: "Other", icon: "🦄")
             ], onChange: {_ in })
         }.previewLayout(.fixed(width: 400, height: 92))
     }

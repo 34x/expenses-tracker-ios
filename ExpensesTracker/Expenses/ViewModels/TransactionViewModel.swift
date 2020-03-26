@@ -127,11 +127,6 @@ struct TransactionViewModel: Encodable, Identifiable {
         self.tags = tags
     }
     
-    init(transaction: Transaction) {
-        self.transactionType = transaction.type
-    }
-    
-    
     func hasTag(tagViewModel: TagViewModel) -> Bool {
         for tag in tags {
             if tagViewModel == tag {

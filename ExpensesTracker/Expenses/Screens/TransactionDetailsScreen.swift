@@ -102,7 +102,7 @@ struct TransactionDetailsScreen: View {
 struct TransactionDetails_Previews: PreviewProvider {
     static var previews: some View {
         TransactionDetailsScreen(
-            transactionViewModel: TransactionViewModel(transaction: transactionData[1])
+            transactionViewModel: TransactionViewModel(type: .expense, tags: [TagViewModel(name: "Music", icon: "🎹")])
         ).previewLayout(.fixed(width: 400, height: 600))
     }
 }
