@@ -11,18 +11,16 @@ import SwiftUI
 struct HistorySection: View {
     var range: DateRange
     @EnvironmentObject var moneyFormatter: MoneyFormatter
+    @EnvironmentObject var dateFormatter: ExpensesDateFormatter
     
     var body: some View {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY MMMM"
-            
         let tags = Account.current.tags(range: range)
         let balance = Account.current.balance(range: range)
         let theme = Theme()
         
         return Section(
             header: HStack {
-                Text(formatter.string(from: range.from))
+                Text(dateFormatter.string(range.from, type: .HistorySection))
                 Spacer()
                 Text(moneyFormatter.string(balance.total))
                     .foregroundColor(theme.balanceColor(balance: balance))

@@ -11,6 +11,7 @@ import SwiftUI
 struct BalanceView: View {
     var balance: Balance
     @EnvironmentObject var moneyFormatter: MoneyFormatter
+    @EnvironmentObject var dateFormatter: ExpensesDateFormatter
     
     var body: some View {
         VStack {
@@ -34,15 +35,11 @@ struct BalanceView: View {
     }
     
     var dateRange: some View {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        
         if let from = balance.from, let till = balance.till {
             return HStack {
-                Text(formatter.string(from: from))
+                Text(dateFormatter.string(from, type: .BalanceView))
                 Spacer()
-                Text(formatter.string(from: till))
+                Text(dateFormatter.string(till, type: .BalanceView))
             }
         }
         

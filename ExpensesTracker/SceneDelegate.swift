@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = ContentView()
             .environment(\.managedObjectContext, context)
             .environmentObject(MoneyFormatter())
+            .environmentObject(ExpensesDateFormatter())
         
         
         

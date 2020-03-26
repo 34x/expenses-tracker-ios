@@ -11,14 +11,12 @@ import SwiftUI
 struct TransactionListSection: View {
     var range: DateRange
     @EnvironmentObject var moneyFormatter: MoneyFormatter
+    @EnvironmentObject var dateFormatter: ExpensesDateFormatter
     
     var body: some View {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        
         let balance = Account.current.balance(range: range)
         
-        let dateTitle = formatter.string(from: range.from)
+        let dateTitle = dateFormatter.string(range.from, type: .TransactionListSection)
         
         let header = HStack {
             Text(dateTitle)

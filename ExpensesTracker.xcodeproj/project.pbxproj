@@ -12,6 +12,7 @@
 		500810452413CD8100DE8342 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500810442413CD8100DE8342 /* Money.swift */; };
 		500810472413F70D00DE8342 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500810462413F70D00DE8342 /* Theme.swift */; };
 		500AA9BA242CC97300DD80BB /* MoneyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AA9B9242CC97300DD80BB /* MoneyFormatter.swift */; };
+		500AA9BC242CD01900DD80BB /* ExpensesDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AA9BB242CD01900DD80BB /* ExpensesDateFormatter.swift */; };
 		504CC27E242147DA00D488FB /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CC27D242147DA00D488FB /* DateRange.swift */; };
 		504CC2802421563600D488FB /* TransactionListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504CC27F2421563600D488FB /* TransactionListSection.swift */; };
 		5056E53D240D77C500072738 /* TagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E53C240D77C500072738 /* TagItemView.swift */; };
@@ -68,6 +69,7 @@
 		500810442413CD8100DE8342 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		500810462413F70D00DE8342 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		500AA9B9242CC97300DD80BB /* MoneyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatter.swift; sourceTree = "<group>"; };
+		500AA9BB242CD01900DD80BB /* ExpensesDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesDateFormatter.swift; sourceTree = "<group>"; };
 		504CC27D242147DA00D488FB /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		504CC27F2421563600D488FB /* TransactionListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListSection.swift; sourceTree = "<group>"; };
 		5056E53C240D77C500072738 /* TagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		500AA9B7242CC92400DD80BB /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				500AA9BB242CD01900DD80BB /* ExpensesDateFormatter.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500AA9BC242CD01900DD80BB /* ExpensesDateFormatter.swift in Sources */,
 				50C3107B241144DB00B40446 /* TagEntity.swift in Sources */,
 				504CC2802421563600D488FB /* TransactionListSection.swift in Sources */,
 				50DB2457240BE9BA004099EF /* BalanceLabel.swift in Sources */,
