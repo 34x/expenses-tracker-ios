@@ -11,7 +11,7 @@ import SwiftUI
 struct NewTagLink: View {
     var body: some View {
         NavigationLink(
-            destination: TagDetails(model: TagViewModel()),
+            destination: TagDetailsScreen(model: TagViewModel()),
             label: {
                 Text("New tag")
             }

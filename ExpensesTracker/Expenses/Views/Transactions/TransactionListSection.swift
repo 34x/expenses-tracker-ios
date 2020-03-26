@@ -29,12 +29,12 @@ struct TransactionListSection: View {
             header: header,
             content: {
                 ForEach(Account.current.transactions(range: range)) {
-                    transaction -> NavigationLink<TransactionRow, TransactionDetails> in
+                    transaction -> NavigationLink<TransactionRow, TransactionDetailsScreen> in
                     
                     let model = TransactionViewModel(transaction: transaction)
 
                     return NavigationLink(
-                        destination: TransactionDetails(transactionViewModel: model),
+                        destination: TransactionDetailsScreen(transactionViewModel: model),
                         label: {
                             TransactionRow(viewModel: model)
                     })

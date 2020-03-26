@@ -14,7 +14,7 @@ struct TagsSettingsScreen: View {
     
     var body: some View {
         let addButton = NavigationLink(
-            destination: TagDetails(model: TagViewModel()),
+            destination: TagDetailsScreen(model: TagViewModel()),
             label: {
                 Image(systemName: "plus").imageScale(.large)
         })
@@ -22,12 +22,12 @@ struct TagsSettingsScreen: View {
         return 
             List {
                 ForEach(self.tags) {
-                    tag -> NavigationLink<TagRow, TagDetails> in
+                    tag -> NavigationLink<TagRow, TagDetailsScreen> in
                     
                     let model = TagViewModel(tag: tag)
                     
                     return NavigationLink(
-                        destination: TagDetails(
+                        destination: TagDetailsScreen(
                             model: model
                         ),
                         label: {

@@ -38,15 +38,14 @@
 		50B9B3A824098C1E00BBF378 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3A724098C1E00BBF378 /* TransactionRow.swift */; };
 		50B9B3AA24098E9F00BBF378 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3A924098E9F00BBF378 /* Transaction.swift */; };
 		50B9B3AC240997FC00BBF378 /* ExpenseDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3AB240997FC00BBF378 /* ExpenseDataLoader.swift */; };
-		50B9B3B0240A868200BBF378 /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3AF240A868200BBF378 /* TransactionDetails.swift */; };
+		50B9B3B0240A868200BBF378 /* TransactionDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3AF240A868200BBF378 /* TransactionDetailsScreen.swift */; };
 		50B9B3B4240AB4E400BBF378 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9B3B3240AB4E400BBF378 /* Account.swift */; };
 		50C31075240EE4ED00B40446 /* TestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C31074240EE4ED00B40446 /* TestList.swift */; };
 		50C310772410380900B40446 /* TransactionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C310762410380800B40446 /* TransactionEntity.swift */; };
 		50C31079241144AF00B40446 /* TagsSettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C31078241144AF00B40446 /* TagsSettingsScreen.swift */; };
 		50C3107B241144DB00B40446 /* TagEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3107A241144DB00B40446 /* TagEntity.swift */; };
 		50C3107D241145A700B40446 /* TagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3107C241145A700B40446 /* TagRow.swift */; };
-		50C3107F2411497100B40446 /* TagDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3107E2411497100B40446 /* TagDetails.swift */; };
-		50D57F9B241543A40080B411 /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D57F9A241543A40080B411 /* TestScreen.swift */; };
+		50C3107F2411497100B40446 /* TagDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3107E2411497100B40446 /* TagDetailsScreen.swift */; };
 		50DB2455240BD23C004099EF /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB2454240BD23C004099EF /* TransactionViewModel.swift */; };
 		50DB2457240BE9BA004099EF /* BalanceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DB2456240BE9BA004099EF /* BalanceLabel.swift */; };
 /* End PBXBuildFile section */
@@ -108,15 +107,14 @@
 		50B9B3A724098C1E00BBF378 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		50B9B3A924098E9F00BBF378 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		50B9B3AB240997FC00BBF378 /* ExpenseDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDataLoader.swift; sourceTree = "<group>"; };
-		50B9B3AF240A868200BBF378 /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
+		50B9B3AF240A868200BBF378 /* TransactionDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsScreen.swift; sourceTree = "<group>"; };
 		50B9B3B3240AB4E400BBF378 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		50C31074240EE4ED00B40446 /* TestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestList.swift; sourceTree = "<group>"; };
 		50C310762410380800B40446 /* TransactionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEntity.swift; sourceTree = "<group>"; };
 		50C31078241144AF00B40446 /* TagsSettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsSettingsScreen.swift; sourceTree = "<group>"; };
 		50C3107A241144DB00B40446 /* TagEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagEntity.swift; sourceTree = "<group>"; };
 		50C3107C241145A700B40446 /* TagRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRow.swift; sourceTree = "<group>"; };
-		50C3107E2411497100B40446 /* TagDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetails.swift; sourceTree = "<group>"; };
-		50D57F9A241543A40080B411 /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		50C3107E2411497100B40446 /* TagDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailsScreen.swift; sourceTree = "<group>"; };
 		50DB2454240BD23C004099EF /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		50DB2456240BE9BA004099EF /* BalanceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,9 +196,8 @@
 			children = (
 				505AAA632416C20E007C3DA4 /* Settings */,
 				509295A02413B66A001FD8D0 /* CreateTransactionScreen.swift */,
-				50C3107E2411497100B40446 /* TagDetails.swift */,
-				50B9B3AF240A868200BBF378 /* TransactionDetails.swift */,
-				50D57F9A241543A40080B411 /* TestScreen.swift */,
+				50C3107E2411497100B40446 /* TagDetailsScreen.swift */,
+				50B9B3AF240A868200BBF378 /* TransactionDetailsScreen.swift */,
 				506AAEA6242207550042FFED /* HistoryScreen.swift */,
 			);
 			path = Screens;
@@ -464,7 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B9B3AA24098E9F00BBF378 /* Transaction.swift in Sources */,
-				50D57F9B241543A40080B411 /* TestScreen.swift in Sources */,
 				50C3107B241144DB00B40446 /* TagEntity.swift in Sources */,
 				504CC2802421563600D488FB /* TransactionListSection.swift in Sources */,
 				50DB2457240BE9BA004099EF /* BalanceLabel.swift in Sources */,
@@ -489,7 +485,7 @@
 				509295A12413B66A001FD8D0 /* CreateTransactionScreen.swift in Sources */,
 				50638EF82393F4E500D05041 /* ContentView.swift in Sources */,
 				50638EBA2392F49F00D05041 /* SceneDelegate.swift in Sources */,
-				50C3107F2411497100B40446 /* TagDetails.swift in Sources */,
+				50C3107F2411497100B40446 /* TagDetailsScreen.swift in Sources */,
 				5056E541240E3A4900072738 /* TransactionTag.swift in Sources */,
 				500810432413CA4000DE8342 /* NewTagLink.swift in Sources */,
 				50DB2455240BD23C004099EF /* TransactionViewModel.swift in Sources */,
@@ -497,7 +493,7 @@
 				50C3107D241145A700B40446 /* TagRow.swift in Sources */,
 				50C310772410380900B40446 /* TransactionEntity.swift in Sources */,
 				5056E543240E3E1600072738 /* TagItemsView.swift in Sources */,
-				50B9B3B0240A868200BBF378 /* TransactionDetails.swift in Sources */,
+				50B9B3B0240A868200BBF378 /* TransactionDetailsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

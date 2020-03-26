@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TransactionDetails: View {
+struct TransactionDetailsScreen: View {
     @Environment(\.presentationMode) var presentation
     
     @State private var viewModel: TransactionViewModel
@@ -101,7 +101,7 @@ struct TransactionDetails: View {
 
 struct TransactionDetails_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionDetails(
+        TransactionDetailsScreen(
             transactionViewModel: TransactionViewModel(transaction: transactionData[1])
         ).previewLayout(.fixed(width: 400, height: 600))
     }

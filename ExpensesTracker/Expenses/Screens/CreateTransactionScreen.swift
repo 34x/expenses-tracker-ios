@@ -21,11 +21,11 @@ struct CreateTransactionScreen: View {
             Form {
                 Section(header: Text("New transaction with tag")) {
                     ForEach(self.tags) {
-                        tag -> NavigationLink<TagRow, TransactionDetails> in
+                        tag -> NavigationLink<TagRow, TransactionDetailsScreen> in
                         
                         let model = TagViewModel(tag: tag)
                         
-                        let destination = TransactionDetails(transactionViewModel: TransactionViewModel(type: model.type, tags: [model]))
+                        let destination = TransactionDetailsScreen(transactionViewModel: TransactionViewModel(type: model.type, tags: [model]))
                                         
                         return NavigationLink(
                             destination: destination,

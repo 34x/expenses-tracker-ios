@@ -31,7 +31,7 @@ import CoreData
 //    }
 //}
 
-struct TagDetails: View {
+struct TagDetailsScreen: View {
     @Environment(\.presentationMode) var presentation
     
     @State var model: TagViewModel
@@ -85,7 +85,7 @@ struct TagDetails: View {
 struct TagDetails_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TagDetails(model: TagViewModel())
+            TagDetailsScreen(model: TagViewModel())
         }
     }
 }

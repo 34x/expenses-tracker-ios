@@ -18,7 +18,7 @@ struct NewTransactionLink: View {
         
         let icon = TransactionType.income == type ? "plus" : "minus"
         
-        let destination = TransactionDetails(
+        let destination = TransactionDetailsScreen(
             transactionViewModel: TransactionViewModel(transaction: Transaction(type: type)))
         
         return NavigationLink(
