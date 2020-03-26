@@ -26,8 +26,8 @@
 		50638EC12392F4A000D05041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50638EC02392F4A000D05041 /* Assets.xcassets */; };
 		50638EC42392F4A000D05041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50638EC32392F4A000D05041 /* Preview Assets.xcassets */; };
 		50638EC72392F4A000D05041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50638EC52392F4A000D05041 /* LaunchScreen.storyboard */; };
-		50638ED22392F4A100D05041 /* ExpencesTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638ED12392F4A100D05041 /* ExpencesTrackerTests.swift */; };
-		50638EDD2392F4A100D05041 /* ExpencesTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EDC2392F4A100D05041 /* ExpencesTrackerUITests.swift */; };
+		50638ED22392F4A100D05041 /* ExpensesTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638ED12392F4A100D05041 /* ExpensesTrackerTests.swift */; };
+		50638EDD2392F4A100D05041 /* ExpensesTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EDC2392F4A100D05041 /* ExpensesTrackerUITests.swift */; };
 		50638EF82393F4E500D05041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50638EF72393F4E500D05041 /* ContentView.swift */; };
 		506AAEA7242207550042FFED /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506AAEA6242207550042FFED /* HistoryScreen.swift */; };
 		506AAEA92422083E0042FFED /* HistorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506AAEA82422083E0042FFED /* HistorySection.swift */; };
@@ -93,10 +93,10 @@
 		50638EC62392F4A000D05041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50638EC82392F4A000D05041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50638ECD2392F4A100D05041 /* ExpensesTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50638ED12392F4A100D05041 /* ExpencesTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpencesTrackerTests.swift; sourceTree = "<group>"; };
+		50638ED12392F4A100D05041 /* ExpensesTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTrackerTests.swift; sourceTree = "<group>"; };
 		50638ED32392F4A100D05041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50638ED82392F4A100D05041 /* ExpensesTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50638EDC2392F4A100D05041 /* ExpencesTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpencesTrackerUITests.swift; sourceTree = "<group>"; };
+		50638EDC2392F4A100D05041 /* ExpensesTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTrackerUITests.swift; sourceTree = "<group>"; };
 		50638EDE2392F4A100D05041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50638EF72393F4E500D05041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		506AAEA6242207550042FFED /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		50638ED02392F4A100D05041 /* ExpensesTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				50638ED12392F4A100D05041 /* ExpencesTrackerTests.swift */,
+				50638ED12392F4A100D05041 /* ExpensesTrackerTests.swift */,
 				50638ED32392F4A100D05041 /* Info.plist */,
 			);
 			path = ExpensesTrackerTests;
@@ -306,7 +306,7 @@
 		50638EDB2392F4A100D05041 /* ExpensesTrackerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				50638EDC2392F4A100D05041 /* ExpencesTrackerUITests.swift */,
+				50638EDC2392F4A100D05041 /* ExpensesTrackerUITests.swift */,
 				50638EDE2392F4A100D05041 /* Info.plist */,
 			);
 			path = ExpensesTrackerUITests;
@@ -505,7 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50638ED22392F4A100D05041 /* ExpencesTrackerTests.swift in Sources */,
+				50638ED22392F4A100D05041 /* ExpensesTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50638EDD2392F4A100D05041 /* ExpencesTrackerUITests.swift in Sources */,
+				50638EDD2392F4A100D05041 /* ExpensesTrackerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
