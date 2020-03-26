@@ -14,6 +14,8 @@ struct TagRow: View {
     var showBalance: Bool = false
     var dateRange: DateRange?
 
+    @EnvironmentObject var moneyFormatter: MoneyFormatter
+    
     var body: some View {
         let balance: Balance = Account.current.balance(range: dateRange ?? DateRange(), tags: [model])
         let theme = Theme()
@@ -26,7 +28,7 @@ struct TagRow: View {
             Text(model.name)
         
             Spacer()
-            showBalance ? Text(balance.total.string)
+            showBalance ? Text(moneyFormatter.string(balance.total))
                 .foregroundColor(theme.balanceColor(balance: balance)) : nil
             
             selected ? Text("✓").font(.title) : nil

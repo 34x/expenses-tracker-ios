@@ -9,12 +9,8 @@
 import Foundation
 
 struct Money {
-    var amount: Double
-    var string: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 2
-        return formatter.string(for: amount) ?? ""
+    var amount: Double = 0.0
+    var amountUnsigned: Double {
+        return abs(amount)
     }
 }

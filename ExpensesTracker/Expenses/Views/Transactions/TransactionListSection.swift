@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TransactionListSection: View {
     var range: DateRange
+    @EnvironmentObject var moneyFormatter: MoneyFormatter
     
     var body: some View {
         let formatter = DateFormatter()
@@ -22,7 +23,7 @@ struct TransactionListSection: View {
         let header = HStack {
             Text(dateTitle)
             Spacer()
-            Text(balance.total.string)
+            Text(moneyFormatter.string(balance.total))
         }
         
         return Section(

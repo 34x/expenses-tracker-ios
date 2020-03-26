@@ -42,7 +42,9 @@ struct TransactionViewModel: Encodable, Identifiable {
     }
     
     var amountValueSigned: String {
-        return String(format: "%@ %@", typeSign, Money(amount: abs(self.amount)).string)
+        // FIXME: use formatter from env
+        let formatter = MoneyFormatter()
+        return String(format: "%@ %@", typeSign, formatter.stringUnsigned(Money(amount: self.amount)))
     }
     
     var typeSign: String {
@@ -86,7 +88,9 @@ struct TransactionViewModel: Encodable, Identifiable {
         self.objectID = transaction.objectID
         self.amount = abs(transaction.amount)
         
-        self.amountValue = Money(amount: self.amount).string
+        // FIXME: use formatter from env
+        let formatter = MoneyFormatter()
+        self.amountValue = formatter.string(Money(amount: self.amount))
     
         self.transactionType = TransactionType(rawValue: Int(transaction.type))!
         self.valueDate = transaction.valueDate ?? Date()

@@ -10,23 +10,25 @@ import SwiftUI
 
 struct BalanceView: View {
     var balance: Balance
+    @EnvironmentObject var moneyFormatter: MoneyFormatter
+    
     var body: some View {
         VStack {
             dateRange.font(.subheadline)
             HStack {
                 Text("Income")
                 Spacer()
-                Text(balance.income.string)
+                Text(moneyFormatter.string(balance.income))
             }
             HStack {
                 Text("Expense")
                 Spacer()
-                Text(balance.expence.string)
+                Text(moneyFormatter.string(balance.expence))
             }
             HStack {
                 Text("Total")
                 Spacer()
-                Text(balance.total.string)
+                Text(moneyFormatter.string(balance.total))
             }.font(.headline)
         }
     }
