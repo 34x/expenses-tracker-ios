@@ -49,6 +49,7 @@ struct CreateTransactionScreen: View {
             .navigationBarTitle(balanceTitle)
             .onAppear() {
                 self.balanceTitle = self.account.getBalanceTitle()
+                // FIXME: trick to reload the list, does not seem pretty
                 self.tagsListId += 1
             }
         }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum DateRangeType {
+    case allBeforeNow
+}
+
 struct DateRange: Equatable, Identifiable {
     var id: String {
         return String("\(from)-\(till)")
@@ -38,6 +42,14 @@ struct DateRange: Equatable, Identifiable {
         from = cal.date(from: componentsFrom) ?? Date()
         
         till = cal.date(byAdding: DateComponents(month: 1, second: -1), to: from) ?? Date()
+    }
+    
+    init(type: DateRangeType) {
+        switch type {
+        case .allBeforeNow:
+            self.till = Date()
+            self.from = Date(timeIntervalSince1970: 0)
+        }
     }
     
     /// - returns: specific day range

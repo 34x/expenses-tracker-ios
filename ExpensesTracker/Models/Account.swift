@@ -266,7 +266,7 @@ class Account: ObservableObject {
     }
     
     func getBalance() -> Balance {
-        return balance(range: DateRange())        
+        return balance(range: DateRange(type: .allBeforeNow))        
     }
     
     func getBalanceTitle() -> String {
