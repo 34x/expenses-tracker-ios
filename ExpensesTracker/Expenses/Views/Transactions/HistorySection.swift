@@ -12,10 +12,11 @@ struct HistorySection: View {
     var range: DateRange
     @EnvironmentObject var moneyFormatter: MoneyFormatter
     @EnvironmentObject var dateFormatter: ExpensesDateFormatter
+    @EnvironmentObject var account: Account
     
     var body: some View {
-        let tags = Account.current.tags(range: range)
-        let balance = Account.current.balance(range: range)
+        let tags = account.tags(range: range)
+        let balance = account.balance(range: range)
         let theme = Theme()
         
         return Section(

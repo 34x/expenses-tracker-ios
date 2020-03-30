@@ -12,9 +12,10 @@ struct TransactionListSection: View {
     var range: DateRange
     @EnvironmentObject var moneyFormatter: MoneyFormatter
     @EnvironmentObject var dateFormatter: ExpensesDateFormatter
+    @EnvironmentObject var account: Account
     
     var body: some View {
-        let balance = Account.current.balance(range: range)
+        let balance = account.balance(range: range)
         
         let dateTitle = dateFormatter.string(range.from, type: .TransactionListSection)
         
@@ -27,7 +28,7 @@ struct TransactionListSection: View {
         return Section(
             header: header,
             content: {
-                ForEach(Account.current.transactions(range: range)) {
+                ForEach(account.transactions(range: range)) {
                     transaction -> NavigationLink<TransactionRow, TransactionDetailsScreen> in
                     
                     let model = TransactionViewModel(transaction: transaction)

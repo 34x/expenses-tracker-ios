@@ -16,10 +16,11 @@ enum ViewBy: Int {
 struct HistoryScreen: View {
     @State private var balanceTitle: String = ""
     @State private var selectedView:ViewBy = .transactions
+    @EnvironmentObject var account: Account
     
     var body: some View {
-        let days = Account.current.getDaysList()
-        let months = Account.current.getMonthsList()
+        let days = account.getDaysList()
+        let months = account.getMonthsList()
 
         return NavigationView {
             VStack {

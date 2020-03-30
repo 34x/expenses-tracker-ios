@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CreateTransactionScreen: View {
     @FetchRequest(fetchRequest: TagEntity.allEntriesFetchRequest()) var tags: FetchedResults<TagEntity>
+    @EnvironmentObject var account: Account
     
     @State var balanceTitle: String = ""
     
@@ -47,7 +48,7 @@ struct CreateTransactionScreen: View {
             
             .navigationBarTitle(balanceTitle)
             .onAppear() {
-                self.balanceTitle = Account.current.getBalanceTitle()
+                self.balanceTitle = self.account.getBalanceTitle()
                 self.tagsListId += 1
             }
         }

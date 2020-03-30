@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TransactionDetailsScreen: View {
     @Environment(\.presentationMode) var presentation
+    @EnvironmentObject var account: Account
     
     @State private var viewModel: TransactionViewModel
     
@@ -76,7 +77,7 @@ struct TransactionDetailsScreen: View {
     }
     
     func saveAction() {
-        Account.current.process(transactionViewModel: self.viewModel)
+        account.process(transactionViewModel: self.viewModel)
         self.presentation.wrappedValue.dismiss()
     }
     

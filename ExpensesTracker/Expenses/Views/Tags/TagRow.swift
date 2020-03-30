@@ -15,9 +15,10 @@ struct TagRow: View {
     var dateRange: DateRange?
 
     @EnvironmentObject var moneyFormatter: MoneyFormatter
+    @EnvironmentObject var account: Account
     
     var body: some View {
-        let balance: Balance = Account.current.balance(range: dateRange ?? DateRange(), tags: [model])
+        let balance: Balance = account.balance(range: dateRange ?? DateRange(), tags: [model])
         let theme = Theme()
         
         return HStack {

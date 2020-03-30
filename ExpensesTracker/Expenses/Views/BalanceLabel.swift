@@ -10,10 +10,11 @@ import SwiftUI
 
 struct BalanceLabel: View {
     @State private var balance: String = "Balance: loading"
+    @EnvironmentObject var account: Account
     
     var body: some View {
         Text(
-            Account.current.getBalanceTitle())
+            account.getBalanceTitle())
             .font(.title)
     }
 }

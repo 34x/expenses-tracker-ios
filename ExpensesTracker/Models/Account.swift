@@ -10,20 +10,10 @@ import Foundation
 import UIKit
 import CoreData
 
+// this is probably will not be needed after implementing correct observable
 let AccountUpdatedNotification = Notification.Name("AccountUpdatedNotification")
 
-class Account {
-    private static var currentAccountInstance: Account?
-    
-    static var current: Account {
-        if let account = currentAccountInstance {
-            return account
-        }
-    
-        currentAccountInstance = Account()
-        return currentAccountInstance!
-    }
-    
+class Account: ObservableObject {
     init() {
         self.createDefaultTagsIfNeeded()
     }
@@ -280,7 +270,7 @@ class Account {
     }
     
     func getBalanceTitle() -> String {
-        String(format:"Balance: %.2f", Account.current.getBalance().total.amount)
+        String(format:"Balance: %.2f", self.getBalance().total.amount)
     }
     
     func process(model: TagViewModel) {

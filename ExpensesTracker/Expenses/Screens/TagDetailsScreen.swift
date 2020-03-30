@@ -33,6 +33,7 @@ import CoreData
 
 struct TagDetailsScreen: View {
     @Environment(\.presentationMode) var presentation
+    @EnvironmentObject var account: Account
     
     @State var model: TagViewModel
     
@@ -77,7 +78,7 @@ struct TagDetailsScreen: View {
     }
     
     private func saveAction() {
-        Account.current.process(model: self.model)
+        account.process(model: self.model)
         self.presentation.wrappedValue.dismiss()
     }
 }

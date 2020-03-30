@@ -28,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environment(\.managedObjectContext, context)
             .environmentObject(MoneyFormatter())
             .environmentObject(ExpensesDateFormatter())
+            .environmentObject(Account())
         
         
         
